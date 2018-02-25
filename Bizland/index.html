@@ -70,6 +70,32 @@
     </div>
   </header>
 
+  <!-- Section: boxes -->
+  <section class="section-boxes center">
+    <div class="row">
+      <div class="col s12 m6 l3 blue white-text box">
+        <i class="material-icons medium">show_chart</i>
+        <h4>Grow Your Business</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad excepturi repellendus iusto voluptatum, nostrum delectus sed ut deserunt laboriosam.</p>
+      </div>
+      <div class="col s12 m6 l3 purple white-text box">
+        <i class="material-icons medium">people</i>
+        <h4>Professional Advisors</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad excepturi repellendus iusto voluptatum, nostrum delectus sed ut deserunt laboriosam.</p>
+      </div>
+      <div class="col s12 m6 l3 teal white-text box">
+        <i class="material-icons medium">verified_user</i>
+        <h4>Secure Your Company</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad excepturi repellendus iusto voluptatum, nostrum delectus sed ut deserunt laboriosam.</p>
+      </div>
+      <div class="col s12 m6 l3 amber darken-4 white-text box">
+        <i class="material-icons medium">account_balance</i>
+        <h4>Multiply Your Income</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ad excepturi repellendus iusto voluptatum, nostrum delectus sed ut deserunt laboriosam.</p>
+      </div>
+    </div>
+  </section>
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -78,6 +104,21 @@
       // Init sidenav
       $('.button-collapse').sideNav();
 
+      // ScrollFire
+      const options = [
+        {
+          selector: '.main-text', offset: 0, callback: function (el) {
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector: '.navbar-fixed', offset: 1500, callback: function () {
+            $('nav').removeClass('transparent').addClass('blue-grey darken-3')
+          }
+        }
+      ]
+
+      Materialize.scrollFire(options);
     });
   </script>
 </body>
